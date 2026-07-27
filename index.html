@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="card-container">
+        <div class="star-container">
+          <img src="images/icon-star.svg" aria-hidden="true" />
+        </div>
+        <div class="feedback-container">
+          <h1>How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+            offering!
+          </p>
+        </div>
+
+        <form class="ratings">
+          <input type="radio" name="rating" id="star-1" value="1" />
+          <label for="star-1">1</label>
+
+          <input type="radio" name="rating" id="star-2" value="2" />
+          <label for="star-2">2</label>
+
+          <input type="radio" name="rating" id="star-3" value="3" />
+          <label for="star-3">3</label>
+
+          <input type="radio" name="rating" id="star-4" value="4" />
+          <label for="star-4">4</label>
+
+          <input type="radio" name="rating" id="star-5" value="5" />
+          <label for="star-5">5</label>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Thank you state -->
+
+    <div class="thanks-container hidden">
+      <div class="image-container">
+        <img src="images/illustration-thank-you.svg" aria-hidden="true" />
+      </div>
+
+      <div class="rating-result">
+        <p>You selected 4 out of 5</p>
+      </div>
+
+      <div class="thanks-text">
+        <h2>Thank you!</h2>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in
+          touch!
+        </p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
