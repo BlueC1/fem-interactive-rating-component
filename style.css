@@ -5,6 +5,8 @@
   --grey-500: hsl(217, 12%, 63%);
   --grey-900: hsl(213, 19%, 18%);
   --grey-950: hsl(216, 12%, 8%);
+  --card-bcg: #1f2630;
+  --circle-bcg: #272e38;
   --orange: hsl(25, 97%, 53%);
 
   --fw-400: 400;
@@ -21,4 +23,143 @@ body,
 input,
 button {
   font-family: 'Overpass', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--grey-950);
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card-container,
+.thanks-container {
+  background-color: var(--card-bcg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  max-width: 400px;
+}
+
+.star-container img {
+  background-color: var(--circle-bcg);
+  padding: 0.7rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.feedback-container h1 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-500);
+  margin-bottom: 1rem;
+}
+
+.feedback-container p {
+  opacity: 0.4;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.radio {
+  position: relative;
+}
+
+input[type='radio'] {
+  cursor: pointer;
+  position: absolute;
+  appearance: none;
+  height: 2rem;
+  width: 100%;
+}
+
+input[type='radio']:checked ~ label {
+  background-color: var(--orange);
+  color: var(--grey-900);
+}
+
+input[type='radio']:hover ~ label {
+  background-color: var(--white);
+  color: var(--grey-900);
+  transition: all 0.3s ease;
+}
+
+.radio label {
+  background-color: var(--circle-bcg);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--grey-500);
+  font-weight: var(--fw-700);
+}
+
+.submit-btn {
+  width: 100%;
+  border: none;
+  background-color: var(--orange);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  padding: 0.8rem;
+  border-radius: 2rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+}
+
+.thanks-container {
+  text-align: center;
+}
+
+.image-container {
+  margin-bottom: 2rem;
+}
+
+.rating-result {
+  display: flex;
+  justify-content: center;
+}
+
+.rating-result p {
+  background-color: var(--circle-bcg);
+  display: grid;
+  place-content: center;
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
+  color: var(--orange);
+  margin-bottom: 2rem;
+}
+
+.thanks-text h2 {
+  margin-bottom: 1rem;
+}
+
+.thanks-text p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: var(--fw-400);
+  opacity: 0.4;
+}
+
+.hidden {
+  display: none;
 }
