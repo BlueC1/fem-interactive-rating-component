@@ -80,7 +80,7 @@ input[type='radio'] {
   cursor: pointer;
   position: absolute;
   appearance: none;
-  height: 2rem;
+  height: 3rem;
   width: 100%;
 }
 
