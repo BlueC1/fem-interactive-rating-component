@@ -15,10 +15,13 @@ submitBtn.addEventListener('click', () => {
   ratingInput.forEach((input) => {
     if (input.checked) {
       starRating = input.value;
+      thanksResults();
     }
   });
 
-  thanksResults();
+  if (!starRating) {
+    alert('You must select a rating.');
+  }
 });
 
 function thanksResults() {
